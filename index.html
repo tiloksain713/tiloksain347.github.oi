@@ -1,0 +1,1083 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+   
+    <title>Document</title>
+<style>
+    body{
+        position: relative; 
+    
+
+}
+
+/* Gray Block Style */
+.gray .nav2,
+.nav2.gray {
+/* Bootstrap variables */
+--bs-body-bg: rgb(246, 246, 246);
+}
+
+/* Dark Gray Block Style */
+.dark-gray .__nav2,
+.nav2.dark-gray {
+/* Bootstrap variables */
+--bs-body-color:#304D30;
+--bs-body-bg: rgb(30, 39, 53);
+}
+
+/* Dark Block Style */
+.dark .nav2,
+.nav2.dark {
+/* Bootstrap variables */
+--bs-body-color: #ffffff;
+
+}
+
+.nav2 .navbar-brand {
+font-weight: 800;
+font-size: 30px;
+color: var(--bs-body-color);
+}
+
+.nav2 .navbar-toggler {
+border: none;
+box-shadow: none !important;
+}
+
+.nav2 .navbar-toggler>span {
+display: flex;
+align-items: center;
+height: 32px;
+}
+
+.nav2 .navbar-toggler>span>span {
+position: relative;
+}
+
+.nav2 .navbar-toggler>span>span,
+.nav2 .navbar-toggler>span>span::before,
+.nav2 .navbar-toggler>span>span::after {
+height: 2px;
+background-color: var(--bs-body-color);
+width: 25px;
+display: inline-block;
+border-radius: 5px;
+transition: all .35s ease-in-out;
+}
+
+.ezy__nav2 .navbar-toggler>span>span::before,
+.ezy__nav2 .navbar-toggler>span>span::after {
+content: '';
+position: absolute;
+left: 0;
+}
+
+.ezy__nav2 .navbar-toggler[aria-expanded="false"]>span>span::before {
+top: 7px;
+}
+
+.ezy__nav2 .navbar-toggler[aria-expanded="false"]>span>span::after {
+bottom: 7px;
+}
+
+.ezy__nav2 .navbar-toggler[aria-expanded="true"]>span>span {
+background-color: transparent;
+}
+
+.ezy__nav2 .navbar-toggler[aria-expanded="true"]>span>span::before {
+top: 0;
+transform: rotate(-45deg);
+}
+
+.ezy__nav2 .navbar-toggler[aria-expanded="true"]>span>span::after {
+bottom: 0;
+transform: rotate(45deg);
+}
+
+.ezy__nav2 .navbar-nav .nav-link {
+color: var(--bs-body-color);
+opacity: .6;
+}
+
+.ezy__nav2 .navbar-nav .nav-link:hover,
+.ezy__nav2 .navbar-nav .nav-link:focus,
+.ezy__nav2 .navbar-nav .nav-link.active {
+color: var(--bs-body-color);
+opacity: 1;
+}
+
+@media (min-width: 992px) {
+.ezy__nav2 .navbar-nav .nav-link {
+  padding-right: 16px;
+  padding-left: 16px;
+}
+}
+
+/* btns */
+.ezy__nav2 .btn-primary {
+background-color: var(--ezy-theme-color);
+border-color: var(--ezy-theme-color);
+}
+
+.ezy__nav2 .btn-primary:hover {
+background-color: rgba(var(--ezy-theme-color-rgb), .9);
+border-color: rgba(var(--ezy-theme-color-rgb), .9);
+}
+
+.ezy__nav2 .btn-outline-primary {
+color: var(--ezy-theme-color);
+border-color: var(--ezy-theme-color);
+}
+
+.ezy__nav2 .btn-outline-primary:hover {
+color: #fff;
+background-color: rgba(var(--ezy-theme-color-rgb), .9);
+border-color: rgba(var(--ezy-theme-color-rgb), .9);
+}
+
+
+/*
+.navbar .navbar-nav .nav-item {
+position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+margin: 0 auto;
+content: "";
+background-color:white;
+width: 0%;
+height: 4px;
+transition: all 0.5s;
+}
+.navbar .navbar-nav .nav-item:hover::after {
+width: 100%;
+}
+*/
+
+
+
+.navbar .navbar-nav .nav-item {
+position: relative;
+}
+
+
+
+.navbar .navbar-nav .nav-item:before, 
+.navbar .navbar-nav .nav-item:after
+{
+position: absolute;
+top: 22px;
+left: 50%;
+width: 50px;
+height: 50px;
+border: 4px solid #032d46;
+transform: translateX(-50%) translateY(-50%) scale(0.8);
+border-radius: 50%;
+background: transparent;
+content: "";
+opacity: 0;
+transition: all 0.3s;
+z-index: -1;
+}
+
+
+.navbar .navbar-nav .nav-item:after
+{
+border-width: 2px;
+transition: all 0.4s;
+}
+
+
+.navbar .navbar-nav .nav-item:hover:before
+{
+opacity: 1;
+transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+
+.navbar .navbar-nav .nav-item:hover:after
+{
+opacity: 1;
+transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+
+
+
+    </style>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+    <div class="ezy__nav2 ">
+      <nav class="navbar navbar-expand-lg  py-3">
+        <div class="container">
+          <a class="navbar-brand fs-5 text-capitalize fw-bloder " href="#">
+           <b>  Tilok SAIN </b>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span>
+              <span></span>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav   ms-auto mb-2 mb-lg-0 mt-4 mt-lg-0">
+              <li class="nav-item"><a class="nav-link active fw-bloder display-2 fs-5 text-capitalize" href="#home"> <b> home</b></a></li>
+              <li class="nav-item"><a class="nav-link fw-bloder display-2 text-capitalize fs-5" href="#skils"><b> skils</b></a></li> 
+              <li class="nav-item"><a class="nav-link fw-bloder display-2 text-capitalize fs-5" href="#porject"> <b>porject </b></a></li>
+              <li class="nav-item"><a class="nav-link fw-bloder display-2 text-capitalize fs-5" href="#contact"> <b>Contect </b></a></li>
+              
+            </ul>
+            <ul class="navbar-nav flex-row mb-2 mb-lg-0 ms-lg-3">
+              <li class="nav-item me-2">
+                
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+   
+</head>
+
+
+
+
+
+    <div id="home" class="container  text-white" ">
+       
+      
+      
+    <section class="ezy__header6 light"  >
+        <div class="container position-relative">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-lg-5 col-xl-4 mb-4 mb-lg-0 text-center text-lg-start">
+              <img src="c:\Users\PC\Desktop\porotfoli\767e8649-1d28-4517-89d8-858e89df4aff.jpg" alt="" class="img-fluid  animate__animated animate__backInLeft  ezy__header6-img" />
+            </div>
+            <div class="col-lg-7 ps-lg-4 ps-xl-5 text-center text-lg-start">
+              <p class="ezy__header6-sub-heading mb-2 opacity-50 animate__animated  animate__backInDown">Web Designer</p>
+              <h2 class="ezy__header6-heading mb-4  animate__animated animate__backInRight">TILOK SAIN</h2>
+              <p class="ezy__header6-sub-heading opacity-75 animate__animated animate__backInUp">
+                Hey there! I'm Tilok sain,
+                currently pursuing a web deging in ousmios
+                at SSIPMT, jodhpur. My primary
+                tech stack includes html, css,
+                bootstrap, java script, J-Query
+              </p>
+              <div class="mt-4 mt-md-5">
+                
+                <a href="#" class="btn btn-outline-primary ezy__header6-btn border-2 my-1">Contact <span
+                    class="fas fa-arrow-right ms-2"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      </div>
+
+
+      
+      <style>
+      .ezy__header6 {
+        /* Bootstrap variables */
+        --bs-body-color: rgb(30, 39, 53);
+        --bs-body-bg: rgb(255, 255, 255);
+      
+        /* Easy Frontend variables */
+        --ezy-theme-color: rgb(30, 39, 53);
+        --ezy-theme-color-rgb: 13, 110, 253;
+        --ezy-shadow: 0px 4px 44px rgba(159, 190, 218, 0.37);
+      
+        background-color: var(--bs-body-bg);
+        overflow: hidden;
+        padding: 80px 0;
+        position: relative;
+      }
+      
+      @media (min-width: 768px) {
+        .ezy__header6 {
+          padding: 150px 0;
+        }
+      }
+      
+      /* Gray Block Style */
+      .gray .ezy__header6,
+      .ezy__header6.gray {
+        /* Bootstrap variables */
+        --bs-body-bg: rgb(246, 246, 246);
+      
+        /* Easy Frontend variables */
+        --ezy-shadow: 0px 4px 44px rgba(132, 162, 188, 0.37);
+      }
+      
+      /* Dark Gray Block Style */
+      .dark-gray .ezy__header6,
+      .ezy__header6.dark-gray {
+        /* Bootstrap variables */
+        --bs-body-color: #ffffff;
+        --bs-body-bg: rgb(30, 39, 53);
+      
+        /* Easy Frontend variables */
+        --ezy-shadow: 0px 4px 44px rgba(44, 44, 44, 0.37);
+      }
+      
+      /* Dark Block Style */
+      .dark .ezy__header6,
+      .ezy__header6.dark {
+        /* Bootstrap variables */
+        --bs-body-color: #ffffff;
+        --bs-body-bg: rgb(11, 23, 39);
+      
+        /* Easy Frontend variables */
+        --ezy-shadow: 0px 4px 44px rgba(0, 0, 0, 0.37);
+      }
+      
+      .ezy__header6-heading {
+        font-weight: bold;
+        font-size: 25px;
+        line-height: 25px;
+        color: var(--bs-body-color);
+      }
+      
+      @media (min-width: 768px) {
+        .ezy__header6-heading {
+          font-size: 70px;
+          line-height: 70px;
+        }
+      }
+      
+      .ezy__header6-sub-heading {
+        color: var(--bs-body-color);
+        font-size: 20px;
+        line-height: 1.5;
+        opacity: 0.8;
+      }
+      
+      .ezy__header6-img {
+        border: 20px solid  rgb(30, 39, 53);
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+      }
+      
+      .ezy__header6-btn {
+        padding: 12px 30px;
+        box-shadow: var(--ezy-shadow);
+        background-color: var(--ezy-theme-color);
+        border-color: var(--ezy-theme-color);
+      }
+      
+      .ezy__header6-btn:hover {
+        background-color: rgba(var(--ezy-theme-color-rgb), 0.9);
+        border-color: rgba(var(--ezy-theme-color-rgb), 0.9);
+      }
+      
+      .ezy__header6 .btn-outline-primary {
+        background-color: transparent;
+        border-color: var(--ezy-theme-color);
+        color: var(--ezy-theme-color);
+      }
+      
+      .ezy__header6 .btn-outline-primary:hover {
+        color: #fff;
+        background-color: var(--ezy-theme-color);
+        border-color: var(--ezy-theme-color);
+      }
+      </style>
+
+
+   
+
+    
+
+ <section>
+
+
+  <style>h1{ padding: 0 0 30px; }
+    .progressbar-title{
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.7px;
+        color: #414141;
+        margin: 5px 0 5px;
+        text-transform: uppercase;
+        padding-bottom: 30px;
+    }
+    .progress{
+        height: 25px;
+        border-radius: 0;
+        box-shadow: none;
+        line-height: 35px;
+        overflow: visible;
+        background: #d6d6d6;
+    }
+    .progress .progress-bar{
+        position: relative;
+        animation: animate-positive 2s;
+    }
+    .progress .progress-bar span{
+        position: absolute;
+        top: -30px;
+        right: 0;
+        background: #424242;
+        color: #fff;
+        padding: 0 20px;
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .progress .progress-bar span:after{
+        content: "";
+        border-top: 6px solid #989898;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        position: absolute;
+        bottom: -6px;
+        left: 66%;
+    }
+    @-webkit-keyframes animate-positive{
+        0% { width: 0%; }
+    }
+    @keyframes animate-positive{
+        0% { width: 0%; }
+    }</style>
+
+
+
+
+<div id="skils" class="container b text-white" style="padding: 20px;">
+       
+      
+<div class="container " data-aos="zoom-in">
+    <div class="row text-center">
+      <h3 class=" display-4 text-center  text-capitalize fw-bolder  heading-course " style="color: rgb(30, 39, 53);"> <b> skils</b> </b></h3>
+   
+    </div>
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <h3 class="progressbar-title text-capitalize fs-5 fw-bolder">HTML5</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width: 90%; background:  rgb(30, 39, 53);">
+                    <span style="background:  rgb(30, 39, 53)">95%</span>
+                </div>
+            </div>
+            <h3 class="progressbar-title text-capitalize fs-5 fw-bolder">CSS</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width: 80%; background:  rgb(30, 39, 53)">
+                    <span style="background: rgb(30, 39, 53)">75%</span>
+                </div>
+            </div>
+            <h3 class="progressbar-title text-capitalize fs-5 fw-bolder">bootstrap 5</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width: 85%; background:  rgb(30, 39, 53)">
+                    <span style="background: rgb(30, 39, 53)">55%</span>
+                </div>
+            </div>
+
+            
+        </div>
+        <div class="col-md-offset-3 col-md-6">
+            <h3 class="progressbar-title text-capitalize fs-5 fw-bolder">java script</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width: 50%; background:  rgb(30, 39, 53)">
+                    <span style="background:  rgb(30, 39, 53);">85%</span>
+                </div>
+            </div>
+            <h3 class="progressbar-title text-capitalize fs-5 fw-bolder">J-Query</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width: 80%; background: rgb(30, 39, 53);">
+                    <span style="background:  rgb(30, 39, 53);">75%</span>
+                </div>
+            </div>
+            <h3 class="progressbar-title text-capitalize fs-5 fw-bolder">git</h3>
+            <div class="progress">
+                <div class="progress-bar" style="width: 70%; background: rgb(30, 39, 53);">
+                    <span style="background:  rgb(30, 39, 53);">55%</span>
+                </div>
+            </div>
+    </div>
+</div>
+      <section>
+
+        </div>
+        
+         <style>.heading2{
+
+            color:#16423C  ;
+            
+              
+          }
+          
+          .product-card {
+              background-color:rgb(30, 39, 53);
+              border-radius: 20px;
+              overflow: hidden;
+              box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+              transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
+          
+          .product-card:hover {
+              transform: translateY(-5px);
+              box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+          }
+          
+          .product-card__image {
+              height: 250px;
+              overflow: hidden;
+          }
+          
+          .product-card__image img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: transform 0.3s ease;
+          }
+          
+          .product-card:hover .product-card__image img {
+              transform: scale(1.05);
+          }
+          
+          .product-card__info {
+              padding: 20px;
+              color:  #E9EFEC;
+          }
+          
+          .product-card__title {
+              font-size: 1.5rem;
+              font-weight: 700;
+              margin-bottom: 10px;
+              color:#E9EFEC;
+          }
+          
+          .product-card__description {
+              font-size: 0.9rem;
+              color: #E9EFEC;
+              margin-bottom: 20px;
+          }
+          
+          .product-card__price-row {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+          
+          .product-card__price {
+              font-size: 1.25rem;
+              font-weight: 600;
+              color:#16423C;
+              background-color:rgb(30, 39, 53);
+          }
+          
+          .product-card__btn {
+              background-color:#E9EFEC;
+              color:#16423C;
+              border: none;
+              padding: 10px 20px;
+              border-radius: 50px;
+              font-size: 0.9rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: 0.3s ease;
+          }
+          
+          .product-card__btn:hover {
+              background-color: white;
+          }
+          
+          @media (max-width: 480px) {
+              .cont {
+                  max-width: 100%;
+                  padding: 0 20px;
+              }
+          
+              .product-card__image {
+                  height: 150px;
+              }
+          
+              .product-card__title {
+                  font-size: 1.3rem;
+              }
+          
+              .product-card__description {
+                  font-size: 0.8rem;
+              }
+          
+              .product-card__price {
+                  font-size: 1.1rem;
+              }
+          
+              .product-card__btn {
+                  padding: 8px 16px;
+                  font-size: 0.8rem;
+          
+          
+          }
+
+          .e-img  
+          {
+            
+  width: 200px;
+  height: 300px;
+  object-fit: fill;
+}
+          
+        
+          }
+        
+          
+        
+        </style>
+
+<div id="porject" class="container b text-white" style="padding:100px 20px;">
+       
+      
+
+          <section >
+         <div    z class=" mt-5 container " data-aos="zoom-in">
+            <h3 class=" display-4 text-center  text-capitalize fw-bolder  heading-course " style="color: rgb(30, 39, 53);"> <b> porject</b> </b></h3>
+              <div class="row   justify-content-between d-flex align-items-center">
+              
+                      <div class=" col-lg-3 mt-5 ">
+                          <div class="product-card img-fluid">
+                              <div class="product-card__image">
+                                  <img class="img-fluid e-img" src="E-learing.jpeg" alt="img-e-learning" >
+                              </div>
+                              <div class="product-card__info">
+                                  <h2 class="product-card__title text-capitalize">E-learing  online platform</h2>
+                                
+                                  <div class="product-card__price-row">
+                                    <span class="text-center" ><button class="product-card__btn text-capitalize border border-2"> <a href="https://tiloksain713.github.io/E--larning-website.github.oi/">show</a></button></span>
+                              
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+    
+    
+                      <div class=" col-lg-3 mt-5 ">
+                          <div class="product-card img-fluid">
+                              <div class="product-card__image">
+                                  <img class="img-fluid" src="E-commers.jpeg
+                                  " alt="Red Nike Shoes" >
+                              </div>
+                              <div class="product-card__info">
+                                  <h2 class="product-card__title text-capitalize">electronic</h2>
+                                  <p class="product-card__description text-capitalize">elecroics</p>
+                                  <div class="product-card__price-row">
+                                    <span ><button class="product-card__btn text-capitalize border border-2"><a href="https://tiloksain713.github.io/electroni.com.github.io/"> show </a></button></span>
+                                    
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+    
+                      <div class="col-lg-3 mt-5 ">
+                          <div class="product-card img-fluid">
+                              <div class="product-card__image">
+                                  <img class="img-fluid" src="dream-home.jpeg" alt="Red Nike Shoes"  height="">
+                              </div>
+                              <div class="product-card__info">
+                                  <h2 class="product-card__title text-capitalize">dream-home</h2>
+                                  <p class="product-card__description text-capitalize"> BOOK YOUR  HOME</p>
+                                  <div class="product-card__price-row">
+                                    <span ><button class="product-card__btn text-capitalize border border-2"><a href="https://tiloksain713.github.io/project3.github.oi/"> show</a></button></span>
+                              
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+
+                      <div class="col-lg-3 mt-5 ">
+                        <div class="product-card img-fluid">
+                            <div class="product-card__image">
+                                <img class="img-fluid" src="c:\Users\PC\Desktop\porotfoli\trevarl.jpeg" alt="Red Nike Shoes">
+                            </div>
+                            <div class="product-card__info">
+                                <h2 class="product-card__title text-capitalize">trevarl</h2>
+                                <p class="product-card__description text-capitalize">onpage / ofpage </p>
+                                <div class="product-card__price-row">
+                                    <span ><button class="product-card__btn text-capitalize border border-2"><a href="https://tiloksain713.github.io/touer.github.oi/"> show</a></button></span>
+                          
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+  
+    
+    
+    
+                      <div class=" col-lg-3 mt-5 ">
+                          <div class="product-card img-fluid">
+                              <div class="product-card__image">
+                                  <img  class="img-fluid" src="crepto_.jpeg" alt="Red Nike Shoes">
+                              </div>
+                              <div class="product-card__info">
+                                  <h2 class="product-card__title text-capitalize">crepto</h2>
+                                  <div class="product-card__price-row">
+                                    <span ><button class="product-card__btn text-capitalize border border-2"><a href="https://tiloksain713.github.io/Crypto-Currency.github.oi/">show</a></button></span>
+                                  
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    
+    
+    
+    
+    
+                      <div class=" col-lg-3 mt-5 ">
+                          <div class="product-card img-fluid">
+                              <div class="product-card__image">
+                                  <img class="img-fluid" src="c:\Users\PC\Desktop\porotfoli\hosting.jpeg
+                                  " alt="Red Nike Shoes">
+                              </div>
+                              <div class="product-card__info">
+                                  <h2 class="product-card__title text-capitalize">hosting</h2>
+                                  <div class="product-card__price-row">
+                                    <span ><button class="product-card__btn text-capitalize border border-2"><a href="https://tiloksain713.github.io/hosting.github.oi/">show</a></button></span>
+                                  
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                    
+    
+    
+    
+                      <div class=" col-lg-3 mt-5">
+                          <div class="product-card img-fluid">
+                              <div class="product-card__image">
+                                  <img  class="img-fluid" src="comstruction.jpeg" alt="Red Nike Shoes">
+                              </div>
+                              <div class="product-card__info">
+                                  <h2 class="product-card__title text-capitalize">comstruction</h2>
+                                  <div class="product-card__price-row">
+                                    <span ><button class="product-card__btn text-capitalize border border-2"><a href="https://tiloksain713.github.io/Construction.github.oi/">show</a></button></span>
+                                  
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-lg-3 mt-5 ">
+                        <div class="product-card img-fluid">
+                            <div class="product-card__image">
+                                <img class="img-fluid" src="c:\Users\PC\Desktop\porotfoli\farnituer.jpeg
+                                " alt="Red Nike Shoes">
+                            </div>
+                            <div class="product-card__info">
+                                <h2 class="product-card__title text-capitalize">Furniture</h2>
+                                <div class="product-card__price-row">
+                                    <span ><button class="product-card__btn text-capitalize border border-2"><a href="https://tiloksain713.github.io/Furniture.github.oi/">show</a></button></span>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+  
+                    
+                    
+    </div>
+    </div>
+    
+    </div>
+    
+      </section>
+
+      </div>
+
+
+
+  
+
+
+  <section>
+
+     <style>.contact {
+      padding: 130px 0;
+  }
+  
+  .contact .heading h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+  
+  }
+  
+  .contact .heading h2 span {
+      color:   rgb(30, 39, 53);;
+  }
+  
+  .contact .heading p {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.7;
+      color:   rgb(30, 39, 53);
+      margin: 20px 0 60px;
+      padding: 0;
+  }
+  
+  .contact .form-control {
+      padding: 25px;
+      font-size: 13px;
+      margin-bottom: 10px;
+      background: #c2bdbd;
+      border: 0;
+      border-radius: 10px;
+  }
+  
+  .contact button.btn {
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 15px;
+      background:   rgb(30, 39, 53);;
+      color: #ffffff;
+  }
+  
+  .contact .title h3 {
+      font-size: 18px;
+      font-weight: 600;
+  }
+  
+  .contact .title p {
+      font-size: 14px;
+      font-weight: 400;
+      color: #999;
+      line-height: 1.6;
+      margin: 0 0 40px;
+  }
+  
+  .contact .content .info {
+      margin-top: 30px;
+  }
+  .contact .content .info i {
+      font-size: 30px;
+      padding: 0;
+      margin: 0;
+      color:   rgb(30, 39, 53);;
+      margin-right: 20px;
+      text-align: center;
+      width: 20px;
+  }
+  .contact .content .info h4 {
+      font-size: 13px;
+      line-height: 1.4;
+  }
+  
+  .contact .content .info h4 span {
+      font-size: 13px;
+      font-weight: 300;
+      color: #999999;
+  }</style>
+
+
+
+
+
+
+<div id="content" class="container  text-white mt-0" >
+    <section class="contact" id="contact"  data-aos="zoom-in">
+      <div class="container">
+          <div class="heading text-center">
+              <h2>Contact
+                  <span class="fw-bolder fs-1 text-capitalize "> Contect </span></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  <br>incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="row">
+              <div class="col-md-5">
+                  <div class="title">
+                      <h3>Contact detail</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor </p>
+                  </div>
+                  <div class="content">
+                      <!-- Info-1 -->
+                      <div class="info">
+                          <i class="fas fa-mobile-alt"></i>
+                          <h4 class="d-inline-block">PHONE :
+                              <br>
+                              <span>+12457836913 , +12457836913</span></h4>
+                      </div>
+                      <!-- Info-2 -->
+                      <div class="info">
+                          <i class="far fa-envelope"></i>
+                          <h4 class="d-inline-block">EMAIL :
+                              <br>
+                              <span>example@info.com</span></h4>
+                      </div>
+                      <!-- Info-3 -->
+                      <div class="info">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <h4 class="d-inline-block">ADDRESS :<br>
+                              <span>6743 last street , Abcd, Xyz</span></h4>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-md-7">
+
+                  <form>
+                      <div class="row">
+                          <div class="col-sm-6">
+                              <input type="text" class="form-control" placeholder="Name">
+                          </div>
+                          <div class="col-sm-6">
+                              <input type="email" class="form-control" placeholder="Email">
+                          </div>
+                          <div class="col-sm-12">
+                              <input type="text" class="form-control" placeholder="Subject">
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
+                      </div>
+                      <button class="btn btn-block" type="submit">Send Now!</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  </div>
+  
+  <style>
+  .ezy__footer1 {
+    /* Bootstrap variables */
+    --bs-body-color: white;
+    --bs-body-bg: rgb(255, 255, 255);
+  
+    /* Easy Frontend variables */
+    --ezy-theme-color: rgb(13, 110, 253);
+    --ezy-theme-color-rgb: 13, 110, 253;
+  
+    background-color: var(--bs-body-bg);
+    color: white;
+    padding: 40px 0;
+  }
+  
+  @media (min-width: 768px) {
+    .ezy__footer1 {
+      padding: 60px 0;
+    }
+  }
+  
+  /* Gray Block Style */
+  .gray .ezy__footer1,
+  .ezy__footer1.gray {
+    /* Bootstrap variables */
+    --bs-body-bg: rgb(246, 246, 246);
+  }
+  
+  /* Dark Gray Block Style */
+  .dark-gray .ezy__footer1,
+  .ezy__footer1.dark-gray {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(30, 39, 53);
+  }
+  
+  .dark .ezy__footer1,
+  .ezy__footer1.dark {
+    /* Bootstrap variables */
+    --bs-body-color: #ffffff;
+    --bs-body-bg: rgb(11, 23, 39);
+  }
+  
+  .ezy__footer1-nav .nav-link {
+    color: var(--bs-body-color);
+  }
+  
+  .ezy__footer1-nav .nav-link:hover {
+    color: var(--bs-body-color);
+    opacity: 0.8;
+  }
+  
+  .ezy__footer1-social li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 6px 8px;
+  }
+  
+  .ezy__footer1-social li a {
+    color: var(--bs-body-color);
+    width: 35px;
+    height: 35px;
+    text-decoration: none;
+  }
+  
+  .ezy__footer1-social li a:hover {
+    color: var(--ezy-theme-color);
+  }
+  </style>
+
+
+
+
+
+<section class="ezy__copyright13 light" data-aos="zoom-in >
+    <div class="ezy__copyright13-img">
+      <img src="../../assets/copyright13.png" alt="" />
+    </div>
+    <div class="container">
+      <div class="text-center">
+        <h5 class="mb-0">&#169; Copyright all rights reserved</h5>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+  .ezy__copyright13 {
+    /* Bootstrap variables */
+    --bs-body-color: #28303b;
+    --bs-body-bg: rgb(255, 255, 255);
+  
+    /* easy frontend variables */
+    --ezy-theme-color: rgb(13, 110, 253);
+    --ezy-theme-color-rgb: 13, 110, 253;
+  
+    background:#28303b;
+  
+    color: #fff;
+    padding: 48px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .ezy__copyright13-img {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: -1;
+  }
+  </style>
+
+<script>
+  AOS.init();
+</script>
+    
+</body>
+</html>
